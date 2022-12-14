@@ -1,12 +1,13 @@
-const { startGame } = require('./modules/startGame');
-const { playBaseballGame } = require('./modules/playBaseballGame');
+const InputView = require('./InputView.js');
+const getComputerNumbers = require('./ComputerRandomNumbers');
 
 class App {
   play() {
-    startGame();
-    playBaseballGame();
+    InputView.printStartGame();
+    getComputerNumbers();
   }
 }
+
 const app = new App();
 app.play();
 module.exports = App;
